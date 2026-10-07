@@ -2,6 +2,25 @@ import SectionHeading from './SectionHeading';
 import Reveal from './Reveal';
 import { experience } from '../data/portfolioData';
 
+const calculateDuration = (startDateStr) => {
+  const startDate = new Date(startDateStr);
+  const now = new Date();
+
+  let years = now.getFullYear() - startDate.getFullYear();
+  let months = now.getMonth() - startDate.getMonth();
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  const yearStr = years > 0 ? `${years} yr${years > 1 ? 's' : ''}` : '';
+  const monthStr = months > 0 ? `${months} mo${months > 1 ? 's' : ''}` : '';
+
+  return [yearStr, monthStr].filter(Boolean).join(' ');
+};
+
+
 const Experience = () => (
   <section id="experience" className="section">
     <div className="container">
@@ -17,7 +36,12 @@ const Experience = () => (
                   <h3 className="exp-role">{job.role}</h3>
                   <span className="exp-company">{job.company}</span>
                 </div>
-                <span className="exp-period">{job.period}</span>
+                <span className="exp-period">
+  {job.current
+    ? `${job.period} · ${calculateDuration(job.startDate)}`
+    : job.period}
+</span>
+
               </div>
 
               <ul className="exp-points">

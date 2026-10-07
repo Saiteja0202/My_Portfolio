@@ -11,29 +11,28 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import * as data from './data/portfolioData';
 
 function App() {
   return (
     <>
-      {/* Ambient / global UI layers */}
       <ParticleBackground />
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
 
-      {/* Page content */}
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Education />
-        <Certifications />
-        <Contact />
+        <Hero profile={data.profile} />
+        <About about={data.about} hobbies={data.hobbies} />
+        <Skills skills={data.skills} />
+        <Experience experience={data.experience} />
+        <Projects projects={data.projects} />
+        <Education education={data.education} />
+        <Certifications certifications={data.certifications} />
+        <Contact profile={data.profile} />
       </main>
 
-      <Footer />
+      <Footer profile={data.profile} />
     </>
   );
 }

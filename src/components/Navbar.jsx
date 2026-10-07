@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { sections, profile } from '../data/portfolioData';
 
-const Navbar = () => {
+const Navbar = ({ }) => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('home');
@@ -29,6 +29,7 @@ const Navbar = () => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
+
     return () => observer.disconnect();
   }, []);
 
@@ -47,6 +48,7 @@ const Navbar = () => {
       <div className="container navbar-inner">
         <button className="nav-logo" onClick={() => go('home')} aria-label="Back to top">
           <span className="logo-reactor" aria-hidden="true">
+            {/* Arc reactor logo */}
             <svg viewBox="0 0 32 32">
               <defs>
                 <radialGradient id="navCore" cx="50%" cy="50%" r="50%">
@@ -89,6 +91,7 @@ const Navbar = () => {
               </button>
             </li>
           ))}
+          {/* Edit button now triggers popup */}
         </ul>
 
         <button

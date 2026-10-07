@@ -33,11 +33,12 @@ export const about = {
     'To leverage my academic background and technical skills in a challenging role that fosters learning, collaboration, and innovation while contributing effectively to project success.',
   // HUD "system status" stat cards
   stats: [
-    { label: 'Experience', value: '1+', suffix: 'yr' },
-    { label: 'Projects Shipped', value: '3', suffix: '+' },
-    { label: 'Tech Stacks', value: '20', suffix: '+' },
-    { label: 'B.Tech CGPA', value: '8.8', suffix: '/10' },
-  ],
+  { label: 'Experience', startDate: '2025-05-01' },
+  { label: 'Projects Shipped', value: '3', suffix: '+' },
+  { label: 'Tech Stacks', value: '20', suffix: '+' },
+  { label: 'B.Tech CGPA', value: '8.8', suffix: '/10' },
+],
+
   highlights: [
     'Java Full Stack Developer at Cognizant',
     'Strong foundation in Spring Boot, Microservices & SQL',
@@ -97,24 +98,42 @@ export const experience = [
   {
     role: 'Java Full Stack Developer',
     company: 'Cognizant',
-    period: 'Apr 2025 – Present',
+    period: 'May 2025 – Present',
+    startDate: '2025-05-01',
     current: true,
     location: 'India',
     points: [
-      'Working on the MetLife Insurance project, enhancing application features and resolving defects using Java Full Stack technologies.',
-      'Collaborating across the stack — Spring Boot services and modern front-end — to ship production-ready enhancements.',
+      'Worked on the MetLife Insurance project, enhancing application features and fixing bugs using Java Full Stack technologies.',
+      'Enhanced the application by developing new modules using Spring, Tapestry, and GWT frameworks.',
+      'Added application controls based on evolving business requirements to ensure compliance and functionality.',
+      'Developed and maintained new insurance contracts and plans in collaboration with product teams.',
+      'Improved payment workflows and benefit enhancements by closely interacting with corresponding business and technical teams.',
     ],
-    tech: ['Java', 'Spring Boot', 'REST APIs', 'SQL', 'Angular'],
+    tech: ['Java', 'Spring Boot', 'Spring', 'Tapestry', 'GWT', 'SQL', 'Microservices'],
   },
 ];
 
+
+
 export const projects = [
   {
-    title: 'Zytra — E-Commerce Platform',
-    subtitle: 'Amazon-style scalable storefront',
+    title: 'AI Shield 360 – Predictive Risk Prevention & AI Liability Insurance Platform',
+    subtitle: 'Enterprise-scale AI risk ecosystem',
+    period: 'Sep 2026 – Oct 2026',
     description:
-      'Architected a scalable e-commerce platform similar to Amazon, covering product catalog, cart, and order flows with clean relational modeling.',
-    tech: ['Spring Boot', 'Maven', 'JPA', 'MySQL'],
+      'Designed and deployed a full-stack insurance risk prevention ecosystem integrating with existing core insurance APIs. Implemented Dynamic Risk Scoring using ML models (XGBoost, TensorFlow) and developed Claim-Before-Loss prediction for fraud, lapse, and under-insurance risks. Built Coverage Gap Analysis and AI Liability Insurance assessment modules to evaluate risks such as hallucinations, autonomous-agent errors, regulatory gaps, and deepfake threats. Developed an Autonomous Protection Agent (LLM + RAG) using LangChain and Azure OpenAI GPT-4o, enabling 24×7 conversational risk advisory. Architected a React 18 + TypeScript dashboard integrated with Spring Boot API Gateway, Kafka events, and PostgreSQL database. Containerized services with Docker & Kubernetes, automated CI/CD pipelines via GitHub Actions, and monitored system health using Prometheus & Grafana. Authored technical documentation covering architecture, ML design, RAG prompts, database schema, and deployment runbooks.',
+    tech: ['React 18', 'TypeScript', 'Spring Boot', 'Kafka', 'PostgreSQL', 'LangChain', 'Azure OpenAI GPT-4o', 'Docker', 'Kubernetes', 'Prometheus', 'Grafana'],
+    link: 'https://github.com/Saiteja0202',
+    accent: 'blue',
+    featured: true,
+  },
+  {
+    title: 'Zytra – An E-Commerce Project',
+    subtitle: 'Amazon-style scalable storefront',
+    period: 'Jan 2026 – Mar 2026',
+    description:
+      'Architected a scalable e-commerce platform similar to Amazon using Spring Boot, Maven, JPA, and MySQL. Implemented JWT-based authentication and Spring Security for secure user sessions and role-based access. Designed REST APIs for product catalog, shopping cart, order management, and payment workflows. Integrated AI-driven recommendation engine to personalize product suggestions based on user behavior and purchase history. Leveraged machine learning models to dynamically generate banners, carousels, and pricing strategies based on top deals and seasonal promotions.',
+    tech: ['Spring Boot', 'Maven', 'JPA', 'MySQL', 'Spring Security', 'JWT', 'Machine Learning'],
     link: 'https://github.com/Saiteja0202',
     accent: 'red',
     featured: true,
@@ -122,19 +141,21 @@ export const projects = [
   {
     title: 'Library Management System',
     subtitle: 'Modular entity-driven system',
+    period: 'Jun 2025 – Aug 2025',
     description:
-      'Developed a modular Library Management System using Spring Boot, JPA, and MySQL, focusing on real-world entity modeling and relational mapping.',
-    tech: ['Spring Boot', 'JPA', 'MySQL'],
+      'Developed a modular Library Management System using Spring Boot, JPA, and MySQL, focusing on real-world entity modeling and relational mapping. Implemented token-based member authentication with custom filters and secure password hashing using BCrypt.',
+    tech: ['Spring Boot', 'JPA', 'MySQL', 'BCrypt'],
     link: 'https://github.com/Saiteja0202',
     accent: 'gold',
-    featured: true,
+    featured: false,
   },
   {
-    title: 'Spam Detection on Social Media',
+    title: 'Comparative Analysis of Spam Detection on Social Media Networks',
     subtitle: 'Comparative ML study',
+    period: 'Oct 2024 – Apr 2025',
     description:
-      'Conducted a comparative study using five supervised machine learning algorithms on datasets sourced from Twitter, Facebook, Messenger, Instagram, and LinkedIn.',
-    tech: ['Python', 'Machine Learning', 'Data Science'],
+      'Conducted a comparative study using five supervised machine learning algorithms on datasets sourced from Twitter, Facebook, Messenger, Instagram, and LinkedIn. Preprocessed text data with feature extraction techniques in Jupyter Notebook; implemented models including Naive Bayes, SVM, Decision Trees, Random Forest, and KNN for classification. Achieved up to 92% accuracy with Random Forest, demonstrating robustness in spam detection.',
+    tech: ['Python', 'Machine Learning', 'Naive Bayes', 'SVM', 'Decision Trees', 'Random Forest', 'KNN'],
     link: 'https://github.com/Saiteja0202',
     accent: 'cyan',
     featured: false,
@@ -163,11 +184,16 @@ export const education = [
 ];
 
 export const certifications = [
-  'Claude Certified Architect — Foundations Certification',
+  'Claude Certified Architect — Foundations Certification (Anthropic, Issued Aug 2026 · Expires Aug 2027, Skills: Prompt Engineering, Large Language Models)',
+  'AWS Academy Graduate — Cloud Foundations (Amazon Web Services, Issued May 2026, Skills: Cloud Computing, AWS Global Infrastructure, EC2, S3, IAM, RDS, VPC, Cost Management, Security Best Practices)',
+  'LOMA SRI 121 — Retirement Plans, Accounts, and Annuities (2nd Edition, Issued Oct 2026, Skills: 401(k) Retirement Savings Plans, Individual Retirement Accounts (IRA))',
+  'LOMA SRI 111 — Retirement Fundamentals (Issued Sep 2026, Skills: Insurance Fundamentals)',
+  'Cognizant Vibe Code Hackathon — Vibe Coded using Cursor (Issued Nov 2025, Skills: Vibe Coding, Cursor AI)',
   'NPTEL — Python for Data Science',
   'NPTEL — Fundamentals of Artificial Intelligence',
-  'Amazon Web Services — Online Internship',
+  'Amazon Web Services — Online Internship'
 ];
+
 
 export const hobbies = [
   { label: 'Playing Cricket', icon: 'cricket' },
